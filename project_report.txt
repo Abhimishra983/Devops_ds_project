@@ -1,0 +1,84 @@
+WITH DAGSTER RUN:
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - RUN_START - Started execution of run for "heart_disease_pipeline".
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - ENGINE_EVENT - Executing steps in process (pid: 270)
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - RESOURCE_INIT_STARTED - Starting initialization of resources [io_manager].
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - RESOURCE_INIT_SUCCESS - Finished initialization of resources [io_manager].
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - LOGS_CAPTURED - Started capturing logs in process (pid: 270).
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - load_data - STEP_START - Started execution of step "load_data".
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - load_data - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - load_data - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - load_data - STEP_SUCCESS - Finished execution of step "load_data" in 13ms.
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - eda - STEP_START - Started execution of step "eda".
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - eda - LOADED_INPUT - Loaded input "df" using input manager "io_manager", from output "result" of step "load_data"
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - eda - STEP_INPUT - Got input "df" of type "Any". (Type check passed).
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - eda - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - eda - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - eda - STEP_SUCCESS - Finished execution of step "eda" in 30ms.
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - feature_engineering - STEP_START - Started execution of step "feature_engineering".
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - feature_engineering - LOADED_INPUT - Loaded input "df" using input manager "io_manager", from output "result" of step "eda"
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - feature_engineering - STEP_INPUT - Got input "df" of type "Any". (Type check passed).
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - feature_engineering - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - feature_engineering - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - feature_engineering - STEP_SUCCESS - Finished execution of step "feature_engineering" in 27ms.
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - train_models - STEP_START - Started execution of step "train_models".
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - train_models - LOADED_INPUT - Loaded input "data" using input manager "io_manager", from output "result" of step "feature_engineering"
+2026-01-25 12:42:26 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - train_models - STEP_INPUT - Got input "data" of type "Any". (Type check passed).
+Shape: (270, 14)
+Age                        0
+Sex                        0
+Chest pain type            0
+BP                         0
+Cholesterol                0
+FBS over 120               0
+EKG results                0
+Max HR                     0
+Exercise angina            0
+ST depression              0
+Slope of ST                0
+Number of vessels fluro    0
+Thallium                   0
+Heart Disease              0
+dtype: int64
+
+Model Accuracy:
+Logistic Regression: 0.93
+Decision Tree: 0.69
+2026-01-25 12:42:30 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - train_models - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2026-01-25 12:42:30 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - train_models - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2026-01-25 12:42:30 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - train_models - STEP_SUCCESS - Finished execution of step "train_models" in 4.08s.
+/usr/local/lib/python3.12/dist-packages/dagster/_core/execution/context_creation_job.py:276: RuntimeWarning: coroutine 'BaseEventLoop.shutdown_asyncgens' was never awaited
+  pass
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+2026-01-25 12:42:30 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - ENGINE_EVENT - Finished steps in process (pid: 270) in 4.22s
+2026-01-25 12:42:30 +0000 - dagster - DEBUG - heart_disease_pipeline - 775e399e-73c3-4c00-976d-77dc382e0f34 - 270 - RUN_SUCCESS - Finished execution of run for "heart_disease_pipeline".
+Random Forest: 0.87
+WITH Dagster Time: 7.19 seconds
+
+
+WITHOUT DAGSTER:
+
+Shape: (270, 14)
+Age                        0
+Sex                        0
+Chest pain type            0
+BP                         0
+Cholesterol                0
+FBS over 120               0
+EKG results                0
+Max HR                     0
+Exercise angina            0
+ST depression              0
+Slope of ST                0
+Number of vessels fluro    0
+Thallium                   0
+Heart Disease              0
+dtype: int64
+Heart Disease
+Absence     150
+Presence    120
+Name: count, dtype: int64
+Logistic Regression: 0.93
+Decision Tree: 0.70
+Random Forest: 0.87
+WITHOUT Dagster Time: 2.39 seconds
+
