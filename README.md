@@ -1,4 +1,4 @@
-# ⏱️ Time Saving Analysis of Machine Learning Pipeline using Dagster
+#  Time Saving Analysis of Machine Learning Pipeline using Dagster
 
 ##  Project Overview
 This project demonstrates how Dagster, a data orchestration tool, helps in building reproducible and efficient machine learning pipelines. The execution time of a traditional ML workflow (without Dagster) is compared with a Dagster-based pipeline using a Heart Disease Prediction dataset.
